@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 
 export class Albums extends Component {
     state = {
-        albumsData: []
+        albumsData: [],
+        albumId: ''
     }
     componentDidMount() {
         axios.get('http://localhost:3001/albums').then(resp => {
@@ -13,7 +15,7 @@ export class Albums extends Component {
             })
         })
     }
-    
+
     render() {
         return (
             <div className="albums-container">
@@ -22,11 +24,12 @@ export class Albums extends Component {
                 </div>
                 <div className="albums">
                     {this.state.albumsData.map((album, i) => {
-                        {console.log(this.state.albumsData)}
-                        return  <div className="album" key={"A" + i}>
-                                    <img src={album.albumImage} alt=""/>
+                        return  <Link to={"/Album/" + album.id} key={"A" + i}>
+                                <div className="album">
+                                    <img src={album.albumImage}  alt=""/>
                                     <h3 className="album-name">{album.albumName}</h3>
                                 </div>
+                                </Link>
 
                     })}
                 </div>

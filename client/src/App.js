@@ -6,15 +6,15 @@ import Album from "./Album";
 import Photo from "./Photo";
 
 class App extends Component {
-	
+
     render() {
     	return (
       		<div className="App">
         		<Router>
 					<div>
 						<Route path="/" exact component={Albums} />
-						<Route path="/Album" exact component={Album} />
-						<Route path="/Photo" exact component={Photo} />
+						<Route path="/album/:id" component={Album} />
+						<Route path="/photo" exact component={Photo} />
 					</div>
         		</Router>
       		</div>
