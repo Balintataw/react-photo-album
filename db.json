@@ -1,0 +1,48 @@
+{
+    "albums": [
+        {
+            "id": 1,
+            "albumName": "Album 1",
+            "albumImage": "http://placehold.it/150/150"
+        },
+        {
+            "id": 2,
+            "albumName": "Album 2",
+            "albumImage": "http://placehold.it/150/150"
+        },
+        {
+            "id":3,
+            "albumName": "Album 3",
+            "albumImage": "http://placehold.it/150/150"
+        },
+        {
+            "id":4,
+            "albumName": "Album 4",
+            "albumImage": "http://placehold.it/150/150"
+        },
+        {
+            "id":5,
+            "albumName": "Album 5",
+            "albumImage": "http://placehold.it/150/150"
+        },
+        {
+            "id":6,
+            "albumName": "Album 6",
+            "albumImage": "http://placehold.it/150/150"
+        }
+    ],
+    "images": [
+        {
+            "id": 1,
+            "albumId": 1,
+            "imageName": "name",
+            "imageURL": "https://images.unsplash.com/photo-1480911620066-b6ccd99c48f3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ab3ba203d674b42648cb6ae472aea865&auto=format&fit=crop&w=2242&q=80"
+        },
+        {
+            "id": 2,
+            "albumId": 1,
+            "imageName": "name",
+            "imageURL": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ebd34ddde3f2b4ea6dcdc9b7d329b774&auto=format&fit=crop&w=2250&q=80"
+        }
+    ]
+}
