@@ -27,7 +27,7 @@
         },
         {
             "id":6,
-            "albumName": "Album 6",
+            "albumName": "Kasakhstan",
             "albumImage": "http://placehold.it/150/150"
         }
     ],
@@ -35,37 +35,37 @@
         {
             "id": 1,
             "albumId": 1,
-            "imageName": "name",
+            "imageName": "Can o Stuff",
             "imageURL": "https://images.unsplash.com/photo-1480911620066-b6ccd99c48f3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ab3ba203d674b42648cb6ae472aea865&auto=format&fit=crop&w=2242&q=80"
         },
         {
             "id": 2,
             "albumId": 1,
-            "imageName": "name",
+            "imageName": "Cherry Blossom Girl",
             "imageURL": "https://images.unsplash.com/photo-1474565667604-9eca57b84678?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=55bc8afab6fb4e0182a2509369756d04&auto=format&fit=crop&w=2250&q=80"
         },
         {
             "id": 3,
             "albumId": 1,
-            "imageName": "name",
+            "imageName": "Osaka Shop",
             "imageURL": "https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b65cdc8391a2fcf1c977295b79b0d8d3&auto=format&fit=crop&w=2300&q=80"
         },
         {
             "id": 4,
             "albumId": 1,
-            "imageName": "name",
+            "imageName": "Mt Fuji, Japan",
             "imageURL": "https://images.unsplash.com/photo-1469996933743-a1f6a78f1082?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=05d2c9dd389424aa18d9155fa68ac5be&auto=format&fit=crop&w=934&q=80"
         },
         {
             "id": 5,
             "albumId": 1,
-            "imageName": "name",
+            "imageName": "Kyoto, Japan",
             "imageURL": "https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f393936aef538204adbdb152665340c&auto=format&fit=crop&w=2226&q=80"
         },
         {
             "id": 6,
             "albumId": 1,
-            "imageName": "name",
+            "imageName": "Noodle Shop",
             "imageURL": "https://images.unsplash.com/photo-1481204287293-36160be24f29?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e492754af5ef6903c1f12411fbc29d1b&auto=format&fit=crop&w=2167&q=80"
         },
         {
@@ -215,38 +215,38 @@
         {
             "id": 31,
             "albumId": 6,
-            "imageName": "name",
-            "imageURL": ""
+            "imageName": "Soyuz Rocket-Kokpek, Kazakhstan",
+            "imageURL": "https://images.unsplash.com/photo-1516801967339-cb50a3ce7781?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f663335c6b0a369ea359d91ebd5ff01f&auto=format&fit=crop&w=2978&q=80"
         },
         {
             "id": 32,
             "albumId": 6,
-            "imageName": "name",
-            "imageURL": ""
+            "imageName": "Almaty, Kazakhstan",
+            "imageURL": "https://images.unsplash.com/photo-1453368228038-2fda759df319?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=763915162becb6387e8336193b64369c&auto=format&fit=crop&w=2167&q=80"
         },
         {
             "id": 33,
             "albumId": 6,
-            "imageName": "name",
-            "imageURL": ""
+            "imageName": "Big Almaty Lake",
+            "imageURL": "https://images.unsplash.com/photo-1453793344096-9c52dc0107fb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a66f34c6b8dce305cec1a81f0591fce9&auto=format&fit=crop&w=2250&q=80"
         },
         {
             "id": 34,
             "albumId": 6,
-            "imageName": "name",
-            "imageURL": ""
+            "imageName": "Charyn Canyon, Kazakhstan",
+            "imageURL": "https://images.unsplash.com/photo-1502655446773-2a93b0d578ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=acf5e3ebf4c8d1823ad58d7e9bcaddc0&auto=format&fit=crop&w=2978&q=80"
         },
         {
             "id": 35,
             "albumId": 6,
-            "imageName": "name",
-            "imageURL": ""
+            "imageName": "Kazakhstan",
+            "imageURL": "https://images.unsplash.com/photo-1457756849838-fbe3da9a2c63?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=880aed31dd7a96c84c9149b817257983&auto=format&fit=crop&w=2250&q=80"
         },
         {
             "id": 36,
             "albumId": 6,
-            "imageName": "name",
-            "imageURL": ""
+            "imageName": "Almaty",
+            "imageURL": "https://images.unsplash.com/photo-1517231232402-36c3cbc4581c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=60eeb2c9d674f710d50312bded50cf39&auto=format&fit=crop&w=2250&q=80"
         }
     ]
 }

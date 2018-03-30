@@ -6,10 +6,11 @@ import axios from 'axios';
 export class Albums extends Component {
     state = {
         albumsData: [],
-        albumId: ''
+        albumId: '',
     }
     componentDidMount() {
-        axios.get('http://localhost:3001/albums').then(resp => {
+        axios.get('http://localhost:3001/albums?_embed=images').then(resp => {
+            console.log(resp.data)
             this.setState({
                 albumsData: resp.data
             })
@@ -24,9 +25,9 @@ export class Albums extends Component {
                 </div>
                 <div className="albums">
                     {this.state.albumsData.map((album, i) => {
-                        return  <Link to={"/Album/" + album.id} key={"A" + i}>
+                        return  <Link to={"/album/" + album.id} key={"A" + i}>
                                 <div className="album">
-                                    <img src={album.albumImage}  alt=""/>
+                                    <img src={album.images[0].imageURL}  alt=""/>
                                     <h3 className="album-name">{album.albumName}</h3>
                                 </div>
                                 </Link>

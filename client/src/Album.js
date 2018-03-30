@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 export class Album extends Component {
@@ -10,7 +11,17 @@ export class Album extends Component {
     componentDidMount(props) {
         const id = this.props.match.params.id
         axios.get(`http://localhost:3001/albums/${id}?_embed=images`).then(resp => {
-            console.log(resp.data)
+            // console.log(resp.data)
+            this.setState({
+                images: resp.data.images,
+                albumName: resp.data.albumName
+            })
+        })
+    }
+
+    componentWillReceiveProps(newprops) {
+        const id = newprops.match.params.id
+        axios.get(`http://localhost:3001/albums/${id}?_embed=images`).then(resp => {
             this.setState({
                 images: resp.data.images,
                 albumName: resp.data.albumName
@@ -21,16 +32,27 @@ export class Album extends Component {
     render() {
         return (
             <div className="album-container">
-                <header className="header">
-                    <h3>{this.state.albumName}</h3>
-                </header>
-                <div className="album-images">
-                    {this.state.images.map((image, i) => {
-                        return  <div className="images-container" key={"image" + i}>
-                                    <img src={image.imageURL}  alt=""/>
-                                    <h3 className="image-name">{image.imageName}</h3>
-                                </div>
-                    })}
+                <div className="sidebar">
+                    <Link to={"/"}>Go Back</Link>
+                    <Link to={"/album/1"}>Album 1</Link>
+                    <Link to={"/album/2"}>Album 2</Link>
+                    <Link to={"/album/3"}>Album 3</Link>
+                    <Link to={"/album/4"}>Album 4</Link>
+                    <Link to={"/album/5"}>Album 5</Link>
+                    <Link to={"/album/6"}>Album 6</Link>
+                </div>
+                <div className="album-container-right">
+                    <header className="header">
+                        <h3>{this.state.albumName}</h3>
+                    </header>
+                    <div className="album-images">
+                        {this.state.images.map((image, i) => {
+                            return  <div className="images-container" key={"image" + i}>
+                                        <img src={image.imageURL}  alt=""/>
+                                        <h3 className="image-name">{image.imageName}</h3>
+                                    </div>
+                        })}
+                    </div>
                 </div>
             </div>
         )
