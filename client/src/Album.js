@@ -11,7 +11,6 @@ export class Album extends Component {
     componentDidMount(props) {
         const id = this.props.match.params.id
         axios.get(`http://localhost:3001/albums/${id}?_embed=images`).then(resp => {
-            // console.log(resp.data)
             this.setState({
                 images: resp.data.images,
                 albumName: resp.data.albumName
@@ -47,10 +46,10 @@ export class Album extends Component {
                     </header>
                     <div className="album-images">
                         {this.state.images.map((image, i) => {
-                            return  <div className="images-container" key={"image" + i}>
+                            return  <Link to={"/photo/" + image.id} key={"image" + i}><div className="images-container">
                                         <img src={image.imageURL}  alt=""/>
                                         <h3 className="image-name">{image.imageName}</h3>
-                                    </div>
+                                    </div></Link>
                         })}
                     </div>
                 </div>

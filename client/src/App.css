@@ -116,3 +116,46 @@
 
 
 /* Photo styling */
+
+.photo-nav-bar {
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(165, 165, 165);
+  border-right: 1px solid black;
+}
+
+.photo-nav-bar a {
+  text-decoration: none;
+  text-align: center;
+  line-height: 65px;
+  background-color: rgb(53, 75, 145);
+  height: 65px;
+  width: 120px;
+  color: white;
+  border-radius: 50% 20%;
+}
+
+.foto-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-and-caption {
+  margin-top: 20px;
+}
+
+#single-foto-img {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  height: 90%;
+}
+
+#image-caption {
+  font-weight: 200;
+  margin-left: 10%;
+}
