@@ -1,23 +1,32 @@
 const initialState = {
     albums: [],
     images: [],
-    currentImage: [],
+    currentImage: {
+        image: '',
+        imageId: '',
+        albumId: '',
+        imageURL: '',
+        imageName: ''
+    },
     albumsAndImages: [],
-    imagesByAlbumId: []
+    imagesByAlbumId: {
+        albumName:'',
+        images:[]
+    }
 }
 
 export default function(state = initialState, action) {
     switch (action.type) {
         case 'GET_ALBUMS':
-            return {albums: action.payload}
+            return {...state, albums: action.payload}
         case 'GET_IMAGES':
-            return {images: action.payload}
+            return {...state, images: action.payload}
         case 'GET_ALBUMS_IMAGES':
-            return {albumsAndImages: action.payload}
+            return {...state, albumsAndImages: action.payload}
         case 'GET_IMAGES_BY_ALBUM_ID':
-            return {imagesByAlbumId: action.payload}
+            return {...state, imagesByAlbumId: action.payload}
         case 'GET_IMAGE_BY_ID':
-            return {currentImage: action.payload}
+            return {...state, currentImage: action.payload}
         case 'ADD_ALBUM':
             return {photos: [...state.albums, action.payload]}
         default:
