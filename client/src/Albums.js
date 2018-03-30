@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import axios from 'axios';
+import {getAlbumsAndImages} from './photoAction';
+import store from './store';
 
 
 export class Albums extends Component {
     state = {
         albumsData: [],
         albumId: '',
+        images: []
     }
     componentDidMount() {
-        axios.get('http://localhost:3001/albums?_embed=images').then(resp => {
-            console.log(resp.data)
+        getAlbumsAndImages()
+        this.unsubscribe = store.subscribe(() => {
+            const state = store.getState()
             this.setState({
-                albumsData: resp.data
+                albumsData: state.albumsAndImages,
             })
         })
+    }
+    componentWillUnmount() {
+        this.unsubscribe()
     }
 
     render() {
@@ -31,7 +37,6 @@ export class Albums extends Component {
                                     <h3 className="album-name">{album.albumName}</h3>
                                 </div>
                                 </Link>
-
                     })}
                 </div>
             </div>

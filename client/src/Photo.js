@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import {getImageById} from './photoAction'
+import store from './store'
 
 export class Photo extends Component {
     state = {
@@ -8,15 +9,18 @@ export class Photo extends Component {
     }
   
     componentDidMount(props) {
-        console.log(this.props.match.params)
-        // console.log(this.props.match)
         const id = this.props.match.params.id
-        axios.get('http://localhost:3001/images/' + id).then(resp => {
-            console.log(resp.data)
+
+        getImageById(id)
+        this.unsubscribe = store.subscribe(() => {
+            const state = store.getState()
             this.setState({
-                image: resp.data
+                image: state.currentImage
             })
         })
+    }
+    componentWillUnmount() {
+        this.unsubscribe()
     }
 
     render() {

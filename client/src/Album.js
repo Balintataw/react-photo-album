@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import store from './store'
+import { getAlbumImagesById } from './photoAction';
 
 export class Album extends Component {
     state = {
@@ -10,14 +12,19 @@ export class Album extends Component {
 
     componentDidMount(props) {
         const id = this.props.match.params.id
-        axios.get(`http://localhost:3001/albums/${id}?_embed=images`).then(resp => {
+
+        getAlbumImagesById(id)
+        this.unsubscribe = store.subscribe(() => {
+            const state = store.getState()
             this.setState({
-                images: resp.data.images,
-                albumName: resp.data.albumName
+                images: state.imagesByAlbumId.images,
+                albumName: state.imagesByAlbumId.albumName
             })
         })
     }
-
+    componentWillUnmount() {
+        this.unsubscribe()
+    }
     componentWillReceiveProps(newprops) {
         const id = newprops.match.params.id
         axios.get(`http://localhost:3001/albums/${id}?_embed=images`).then(resp => {
