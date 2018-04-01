@@ -6,6 +6,7 @@ import './App.css';
 import Albums from "./Albums";
 import Album from "./Album";
 import Photo from "./Photo";
+import AddImage from "./AddImage"
 
 class App extends Component {
 
@@ -18,6 +19,7 @@ class App extends Component {
 						<Route path="/" exact component={Albums} />
 						<Route path="/album/:id" component={Album} />
 						<Route path="/photo/:id" component={Photo} />
+						<Route path="/addimage/" component={AddImage} />
 					</div>
         		</Router>
       		</div>

@@ -12,6 +12,7 @@ export class Sidebar extends Component {
             <div>
                 <div className="sidebar">
                 <Link to={"/"}>Go Back</Link>
+                <Link to={"/addimage"}>Add an Image</Link>
                     {this.props.albums.map((album, i) => {
                         return <Link to={"/album/" + album.id} key={"alp" + i}>{album.albumName}</Link>
                         
