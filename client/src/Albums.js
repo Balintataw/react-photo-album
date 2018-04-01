@@ -13,16 +13,8 @@ export class Albums extends Component {
     // }
     componentDidMount() {
         getAlbumsAndImages()
-        // this.unsubscribe = store.subscribe(() => {
-        //     const state = store.getState()
-        //     this.setState({
-        //         albumsData: state.albumsAndImages,
-        //     })
-        // })
+
     }
-    // componentWillUnmount() {
-    //     this.unsubscribe()
-    // }
 
     render() {
         return (

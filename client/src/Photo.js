@@ -1,33 +1,38 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import {getImageById} from './photoAction'
+import {getImageById, getAlbumImagesById, getImages} from './photoAction'
 import {connect} from 'react-redux'
 
 export class Photo extends Component {
   
     componentDidMount(props) {
+        // console.log(this.props)
         const id = this.props.match.params.id
+        // const album_Id = this.props.albumId
         getImageById(id)
+        // getImages()
+        // getAlbumImagesById(album_Id)
     }
 
-    next = () => {
-        getImageById(this.props.imageId + 1)
-    }
-    previous = () => {
-        getImageById(this.props.imageId - 1)
-    }
-    componentWillReceiveProps(nextProps) {
-        console.log(this.props.albumId)
-        console.log(nextProps.albumId)
-        if(nextProps.albumId !== this.props.albumId) {
-            console.log('good')
-        }
-    }
+    // next = () => {
+    //     getImageById(this.props.imageId + 1)
+    // }
+    // previous = () => {
+    //     getImageById(this.props.imageId - 1)
+    // }
+    // componentWillReceiveProps(nextProps) {
+    //     console.log(this.props.albumId)
+    //     console.log(nextProps.albumId)
+    //     if(nextProps.albumId !== this.props.albumId) {
+    //         console.log('good')
+    //     }
+    // }
 
     render() {
         return (
             <div className="foto-container">
                 <div className="photo-nav-bar">
+                {/* {console.log(this.props)} */}
                     <Link onClick={this.previous} to={'/photo/' + this.props.imageId}>Previous</Link> 
                     <Link to={'/album/' + this.props.albumId}>Go back</Link> 
                     <Link onClick={this.next} to={'/photo/' + this.props.imageId}>Next</Link> 
@@ -43,7 +48,7 @@ export class Photo extends Component {
 };
 
 function mapStateToProps(state) {
-    console.log(state)
+    // console.log(state)
     return {
         image: state.currentImage.image,
         imageId: state.currentImage.id,
