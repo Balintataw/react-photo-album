@@ -56,6 +56,8 @@
 
 .album-container {
   display: flex;
+  /* min-width: 960px; */
+  
   /* width: 100%; */
 }
 
@@ -72,14 +74,17 @@
 
 .album-container-right {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   min-width: 100%;
+  /* width: 100%; */
   margin-left: 300px;
   background-color: rgb(232, 232, 232);
 }
 
 .header {
   text-align: center;
+  margin: 0 auto;
   font-size: 20px;
 }
 

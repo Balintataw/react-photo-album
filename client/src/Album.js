@@ -35,7 +35,7 @@ export class Album extends Component {
                     </header>
                     <div className="album-images">
                         {this.props.images.map((image, i) => {
-                            return  <Link to={"/photo/" + image.id + ''} key={"image" + i}><div className="images-container">
+                            return  <Link to={"/photo/" + image.id} key={"image" + i}><div className="images-container">
                             {/* {console.log(image)} */}
                                         <img src={image.imageURL}  alt=""/>
                                         <h3 className="image-name">{image.imageName}</h3>

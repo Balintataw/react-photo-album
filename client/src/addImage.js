@@ -26,6 +26,8 @@ export class AddImage extends Component {
     render() {
 		return (
 			<div className="addImage-container">
+						{console.log(this)}
+			
      		    <Sidebar />
 				<div className="addImage-container-right">
 					<form onSubmit={this.handleFormSubmit} id="form-container">
@@ -33,7 +35,7 @@ export class AddImage extends Component {
 						<input onChange={this.handleChange} type='text' value={this.state.imageName} name='imageName' placeholder='Image Name' />
 						<input onChange={this.handleChange} type='text' value={this.state.imageURL} name='imageURL' placeholder='Image Path' />
 						<button tytpe='submit'>Save</button>
-						{/* <Link to={this.props.history.goBack}>Go Back</Link> */}
+						<Link to={this.props.location.pathname}>Go Back</Link>
 					</form>
 				</div>
 			</div>
