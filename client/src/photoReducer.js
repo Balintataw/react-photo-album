@@ -12,6 +12,13 @@ const initialState = {
     imagesByAlbumId: {
         albumName:'',
         images:[]
+    },
+    adjacent: {
+        prev:{},
+        next:{},
+        curr:{
+            
+        }
     }
 }
 
@@ -29,6 +36,8 @@ export default function(state = initialState, action) {
             return {...state, currentImage: action.payload}
         case 'ADD_ALBUM':
             return {photos: [...state.albums, action.payload]}
+        case 'GET_ADJACENT':
+            return {...state, adjacent: action.payload}
         default:
             return state
     }

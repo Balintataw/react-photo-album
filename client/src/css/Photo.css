@@ -34,14 +34,29 @@
   }
   
   .img-and-caption {
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
   }
   
-  #single-foto-img {
+  .single-foto-img {
     display: flex;
-    margin: 0 auto;
+    margin: 0;
     width: 90%;
     height: 90%;
+  }
+
+  #left, #right {
+    width: 5rem;
+    margin: 10px;
+  }
+
+  #center {
+    height: 100%;
+    /* max-height: 800px; */
+    width: 80%;
+
   }
   
   #image-caption {
@@ -52,6 +67,7 @@
   .delete-image-button {
     background-color: rgb(53, 75, 145);
     color: white;    
+    width: 20%;
     line-height: 1.5rem;
     margin-left: 4.5rem;
     margin-bottom: 1rem;

@@ -1,258 +1,268 @@
 {
   "albums": [
     {
-      "id": "1",
+      "id": 1,
       "albumName": "Japan"
     },
     {
-      "id": "2",
+      "id": 2,
       "albumName": "Germany"
     },
     {
-      "id": "3",
+      "id": 3,
       "albumName": "Philippines"
     },
     {
-      "id": "4",
+      "id": 4,
       "albumName": "Norway"
     },
     {
-      "id": "5",
+      "id": 5,
       "albumName": "Russia"
     },
     {
-      "id": "6",
+      "id": 6,
       "albumName": "Kazakhstan"
+    },
+    {
+      "albumName": "woof",
+      "id": 7
     }
   ],
   "images": [
     {
       "id": 1,
-      "albumId": "1",
+      "albumId": 1,
       "imageName": "Can o Stuff",
       "imageURL": "https://images.unsplash.com/photo-1480911620066-b6ccd99c48f3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ab3ba203d674b42648cb6ae472aea865&auto=format&fit=crop&w=2242&q=80"
     },
     {
       "id": 2,
-      "albumId": "1",
+      "albumId": 1,
       "imageName": "Cherry Blossom Girl",
       "imageURL": "https://images.unsplash.com/photo-1474565667604-9eca57b84678?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=55bc8afab6fb4e0182a2509369756d04&auto=format&fit=crop&w=2250&q=80"
     },
     {
       "id": 3,
-      "albumId": "1",
+      "albumId": 1,
       "imageName": "Osaka Shop",
       "imageURL": "https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b65cdc8391a2fcf1c977295b79b0d8d3&auto=format&fit=crop&w=2300&q=80"
     },
     {
       "id": 4,
-      "albumId": "1",
+      "albumId": 1,
       "imageName": "Mt Fuji, Japan",
       "imageURL": "https://images.unsplash.com/photo-1469996933743-a1f6a78f1082?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=05d2c9dd389424aa18d9155fa68ac5be&auto=format&fit=crop&w=934&q=80"
     },
     {
       "id": 5,
-      "albumId": "1",
+      "albumId": 1,
       "imageName": "Kyoto, Japan",
       "imageURL": "https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5f393936aef538204adbdb152665340c&auto=format&fit=crop&w=2226&q=80"
     },
     {
       "id": 6,
-      "albumId": "1",
+      "albumId": 1,
       "imageName": "Noodle Shop",
       "imageURL": "https://images.unsplash.com/photo-1481204287293-36160be24f29?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e492754af5ef6903c1f12411fbc29d1b&auto=format&fit=crop&w=2167&q=80"
     },
     {
       "id": 7,
-      "albumId": "2",
+      "albumId": 2,
       "imageName": "Neuschwanstein Castle",
       "imageURL": "https://images.unsplash.com/photo-1484053801020-3a74ca659b03?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=df24f0b5fa0c70ffcd2ce0a0b4a1482a&auto=format&fit=crop&w=2250&q=80"
     },
     {
       "id": 8,
-      "albumId": "2",
+      "albumId": 2,
       "imageName": "Elitz Castle",
       "imageURL": "https://images.unsplash.com/photo-1515356619894-b89131037e3d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3847bcfb301b018ec4672522e1f9ba02&auto=format&fit=crop&w=2250&q=80"
     },
     {
       "id": 10,
-      "albumId": "2",
+      "albumId": 2,
       "imageName": "Bourscheid",
       "imageURL": "https://images.unsplash.com/photo-1508155641259-941693f38a91?ixlib=rb-0.3.5&s=c02ea1c62be4c8017b0b752561832814&auto=format&fit=crop&w=2251&q=80"
     },
     {
       "id": 11,
-      "albumId": "2",
+      "albumId": 2,
       "imageName": "Elitz",
       "imageURL": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=27766c5b0bb862b7a48271ab6ab86513&auto=format&fit=crop&w=931&q=80"
     },
     {
       "id": 12,
-      "albumId": "2",
+      "albumId": 2,
       "imageName": "Cologne Cathedral",
       "imageURL": "https://images.unsplash.com/photo-1489910339994-ce69e94e4856?ixlib=rb-0.3.5&s=67a9f2d010f40768b4ee129b018a2475&auto=format&fit=crop&w=2162&q=80"
     },
     {
       "id": 13,
-      "albumId": "3",
+      "albumId": 3,
       "imageName": "El Nido",
       "imageURL": "https://images.unsplash.com/photo-1519485837477-db36b0c4ad7a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b677072a3df15d0e5577ee7c1e6569bd&auto=format&fit=crop&w=1850&q=80"
     },
     {
       "id": 14,
-      "albumId": "3",
+      "albumId": 3,
       "imageName": "Jeep",
       "imageURL": "https://images.unsplash.com/photo-1494676051766-7a7454d53904?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c2e1eb245909618bead1d594af5a4bc&auto=format&fit=crop&w=2252&q=80"
     },
     {
       "id": 15,
-      "albumId": "3",
+      "albumId": 3,
       "imageName": "Boracay",
       "imageURL": "https://images.unsplash.com/photo-1464757494038-157e877f60d4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8d138ae1b59bf5d1476db4b1f053b13f&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb"
     },
     {
       "id": 16,
-      "albumId": "3",
+      "albumId": 3,
       "imageName": "Basketball in the Phils",
       "imageURL": "https://images.unsplash.com/photo-1512973866256-a574f470ab27?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=49c5696b76ac3062ca1fa9ed43c31012&auto=format&fit=crop&w=2974&q=80"
     },
     {
       "id": 17,
-      "albumId": "3",
+      "albumId": 3,
       "imageName": "Libertad, Pasay chessgame",
       "imageURL": "https://images.unsplash.com/photo-1488417607860-c37d00aebe62?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d4528d4f6d029b4cadf847d84792728f&auto=format&fit=crop&w=2250&q=80"
     },
     {
       "id": 18,
-      "albumId": "3",
+      "albumId": 3,
       "imageName": "Palawan",
       "imageURL": "https://images.unsplash.com/photo-1462173452861-5e86fafb2001?ixlib=rb-0.3.5&s=d5266bd04fd508a02586e3eebcf7edd8&auto=format&fit=crop&w=934&q=80"
     },
     {
       "id": 19,
-      "albumId": "4",
+      "albumId": 4,
       "imageName": "Oslo Opera House",
       "imageURL": "https://images.unsplash.com/photo-1518517611416-da57df49b8d3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=07896507ca92cd84092dc0c5c36cf451&auto=format&fit=crop&w=2269&q=80"
     },
     {
       "id": 20,
-      "albumId": "4",
+      "albumId": 4,
       "imageName": "Hamnoy",
       "imageURL": "https://images.unsplash.com/photo-1506701160839-34cfdecaf53c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6001e74750b15bd9e5099e796deac04a&auto=format&fit=crop&w=2250&q=80"
     },
     {
       "id": 21,
-      "albumId": "4",
+      "albumId": 4,
       "imageName": "Trolltunga",
       "imageURL": "https://images.unsplash.com/photo-1506967554512-fc1ad1c0b21b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=df98a3f56f0729948a6cb360d9d916b1&auto=format&fit=crop&w=2255&q=80"
     },
     {
       "id": 22,
-      "albumId": "4",
+      "albumId": 4,
       "imageName": "Skagsandan",
       "imageURL": "https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6f4c9b7d76e19a3c9c3ba3ddbe62ae43&auto=format&fit=crop&w=934&q=80"
     },
     {
       "id": 23,
-      "albumId": "4",
+      "albumId": 4,
       "imageName": "Tromso",
       "imageURL": "https://images.unsplash.com/photo-1443926886562-c91054221a5c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=36ea7b3ba760395e9347a37847889727&auto=format&fit=crop&w=934&q=80"
     },
     {
       "id": 24,
-      "albumId": "4",
+      "albumId": 4,
       "imageName": "Geilo",
       "imageURL": "https://images.unsplash.com/photo-1468476775582-6bede20f356f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ee24ef8412027b4f9b1d631bba413f25&auto=format&fit=crop&w=2266&q=80"
     },
     {
       "id": 25,
-      "albumId": "5",
+      "albumId": 5,
       "imageName": "Moscow",
       "imageURL": "https://images.unsplash.com/photo-1512495039889-52a3b799c9bc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a4f1da55b3f9a230cd9af28b62fbd785&auto=format&fit=crop&w=934&q=80"
     },
     {
       "id": 26,
-      "albumId": "5",
+      "albumId": 5,
       "imageName": "St. Petersburg",
       "imageURL": "https://images.unsplash.com/photo-1434871619871-1f315a50efba?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d342f0360b9909b20695eda7f7b525e2&auto=format&fit=crop&w=2253&q=80"
     },
     {
       "id": 27,
-      "albumId": "5",
+      "albumId": 5,
       "imageName": "Ust'-Barguzin Russia",
       "imageURL": "https://images.unsplash.com/photo-1443397646383-16272048780e?ixlib=rb-0.3.5&s=b26f3786d82b7a9d1a22d69cd094ff1e&auto=format&fit=crop&w=2167&q=80"
     },
     {
       "id": 28,
-      "albumId": "5",
+      "albumId": 5,
       "imageName": "Lake Baikal",
       "imageURL": "https://images.unsplash.com/photo-1518680371558-107eece618ec?ixlib=rb-0.3.5&s=a3f208495484072648af9af7c2e217af&auto=format&fit=crop&w=2980&q=80"
     },
     {
       "id": 29,
-      "albumId": "5",
+      "albumId": 5,
       "imageName": "Siberia",
       "imageURL": "https://images.unsplash.com/photo-1492057201103-01c5991d4596?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=66f4cb6815031ca80423fac5b40dae32&auto=format&fit=crop&w=2255&q=80"
     },
     {
       "id": 30,
-      "albumId": "5",
+      "albumId": 5,
       "imageName": "Tulinovka, Russia",
       "imageURL": "https://images.unsplash.com/photo-1516128935666-9742cf27e24c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5b45b36558024afd822c545a4c5ee938&auto=format&fit=crop&w=1275&q=80"
     },
     {
       "id": 31,
-      "albumId": "6",
+      "albumId": 6,
       "imageName": "Soyuz Rocket-Kokpek, Kazakhstan",
       "imageURL": "https://images.unsplash.com/photo-1516801967339-cb50a3ce7781?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f663335c6b0a369ea359d91ebd5ff01f&auto=format&fit=crop&w=2978&q=80"
     },
     {
       "id": 32,
-      "albumId": "6",
+      "albumId": 6,
       "imageName": "Almaty, Kazakhstan",
       "imageURL": "https://images.unsplash.com/photo-1453368228038-2fda759df319?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=763915162becb6387e8336193b64369c&auto=format&fit=crop&w=2167&q=80"
     },
     {
       "id": 33,
-      "albumId": "6",
+      "albumId": 6,
       "imageName": "Big Almaty Lake",
       "imageURL": "https://images.unsplash.com/photo-1453793344096-9c52dc0107fb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a66f34c6b8dce305cec1a81f0591fce9&auto=format&fit=crop&w=2250&q=80"
     },
     {
       "id": 34,
-      "albumId": "6",
+      "albumId": 6,
       "imageName": "Charyn Canyon, Kazakhstan",
       "imageURL": "https://images.unsplash.com/photo-1502655446773-2a93b0d578ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=acf5e3ebf4c8d1823ad58d7e9bcaddc0&auto=format&fit=crop&w=2978&q=80"
     },
     {
       "id": 35,
-      "albumId": "6",
+      "albumId": 6,
       "imageName": "Kazakhstan",
       "imageURL": "https://images.unsplash.com/photo-1457756849838-fbe3da9a2c63?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=880aed31dd7a96c84c9149b817257983&auto=format&fit=crop&w=2250&q=80"
     },
     {
       "id": 36,
-      "albumId": "6",
+      "albumId": 6,
       "imageName": "Almaty",
       "imageURL": "https://images.unsplash.com/photo-1517231232402-36c3cbc4581c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=60eeb2c9d674f710d50312bded50cf39&auto=format&fit=crop&w=2250&q=80"
     },
     {
-      "albumId": "1",
+      "albumId": 1,
       "imageName": "Siopao",
       "imageURL": "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=815082c477a9063db2148495201e1137&auto=format&fit=crop&w=934&q=80",
       "id": 41
     },
     {
-      "albumId": "1",
+      "albumId": 1,
       "imageName": "Siopao",
       "imageURL": "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=815082c477a9063db2148495201e1137&auto=format&fit=crop&w=934&q=80",
       "id": 42
     },
     {
-      "albumId": "2",
+      "albumId": 2,
       "imageName": "Rothenburg ob der Tauber, Germany",
       "imageURL": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=50b722a080aa7a9fd10746b95b82c2e7&auto=format&fit=crop&w=2250&q=80",
       "id": 43
+    },
+    {
+      "albumId": 7,
+      "imageName": "Mabaiit na Tuta",
+      "imageURL": "https://images.unsplash.com/photo-1509119993276-d691aff73209?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bc65ece79e497524debe8521a6b3aa63&auto=format&fit=crop&w=2252&q=80",
+      "id": 44
     }
   ]
 }

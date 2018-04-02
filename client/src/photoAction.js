@@ -13,7 +13,7 @@ import axios from 'axios'
 //             payload: objgoeshere
 //         })
 //     })
-// }
+// }                      
 export function getAlbumsAndImages() {
     axios.get('http://localhost:3001/albums?_embed=images').then(resp => {
         store.dispatch({
@@ -23,6 +23,9 @@ export function getAlbumsAndImages() {
     })
 }
 
+//localhost:3001/images/id?_expand=albums
+//localhost:3001/albums/id?_embed=images
+//localhost:3001/images/3/?_expand=album&albumId=1&_page=1&
 export function getAlbums() {
     axios.get('http://localhost:3001/albums').then(resp => {
         store.dispatch({
@@ -42,12 +45,55 @@ export function getAlbumImagesById(id) {
 }
 
 export function getImageById(id) {
-    axios.get(`http://localhost:3001/images/${id}`).then(resp => {
+    // if(id) {
+    axios.get(`http://localhost:3001/images/${id}?_expand=album`).then(resp => {
+        // const image = resp.data
+        // axios.get(`http://localhost:3001/albums/${id}?embed=images`).then(resp2 => {
+        //     const images = resp2.data.images
+        //     const rep = {
+        //         prev: images.find((im, i) => {
+        //             if(images[i + 1] === image.id) {
+        //                 return true
+        //             } else {
+        //                 return false
+        //             }
+        //         }),
+        //         curr: image,
+        //         next: images.find((im, i) => {
+        //             if(images[i-1] === image.id) {
+        //                 return true
+        //             } else {
+        //                 return false
+        //             }
+        //         })
+        //     }
+        //     console.log(rep)
+        // })
         store.dispatch({
             type: 'GET_IMAGE_BY_ID',
             payload: resp.data
         })
     })
+    // }
+}
+
+export function getAdjacent(id) {
+    let p = Number(id)-2
+    const n = Number(id)+1
+    // if (p < 0) {return p = p+2}
+        axios.get(`http://localhost:3001/images/?_start=${p}&_end=${n}`).then(resp => {
+            store.dispatch({
+                type: 'GET_ADJACENT',
+                // payload: resp.data
+                payload: {
+                    prev: resp.data[0],
+                    curr: resp.data[1],
+                    next: resp.data[2]
+                }
+            })
+            // console.log(resp.data)
+        })
+    
 }
 
 export function getImages() {

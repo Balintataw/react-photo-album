@@ -33,6 +33,7 @@ export class Sidebar extends Component {
 };
 
 function mapStateToProps(state) {
+    // console.log(state)
     return {
         albums: state.albums
     }
