@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Sidebar from './Sidebar'
+// import AddAlbum from './AddAlbum'
 import './css/AddImage.css'
 
 export class AddImage extends Component {
@@ -16,8 +17,6 @@ export class AddImage extends Component {
 	  	}).catch(e => console.log(e)) 
 	}
 	handleChange = (e) => {
-		console.log(typeof e.target.value)
-		console.log(typeof e.target.name)
 		this.setState({
 			[e.target.name]: e.target.value
 		})
@@ -40,6 +39,7 @@ export class AddImage extends Component {
 						<button onClick={this.handleClick} type="button"className="back">Go Back</button>  
 					</form>
 				</div>
+				{/* <AddAlbum /> */}
 			</div>
 		)
     }

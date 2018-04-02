@@ -1,10 +1,9 @@
-.addImage-container {
+.add-album-container {
     display: flex;
     height: 100%;
-    
-  }
+}
   
-  .addImage-container-right {
+.add-album-container-right {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -12,9 +11,9 @@
     background-color: rgb(232, 232, 232);
     margin-top: 4rem;
     margin-left: 300px;
-  }
+}
   
-  #form-container {
+#form-container {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -22,21 +21,21 @@
     align-items: center;
     /* justify-content: center; */
     margin-top: 50px;
-  }
+}
   
-  #form-container input {
+#form-container input {
     height: 30px;
     width: 100%;
     padding: 10px;
     font-size: 18px;
     margin: 10px;
     border-radius: 5px;
-  }
+}
 
-  .save, .back {
+.save, .back {
     line-height: 1.5rem;
     margin-bottom: 1rem;
     border-radius: 10px;
     background-color: rgb(53, 75, 145);
     color: white;      
-  }
+}

@@ -7,6 +7,7 @@ import Albums from "./Albums"
 import Album from "./Album"
 import Photo from "./Photo"
 import AddImage from "./AddImage"
+import AddAlbum from "./AddAlbum"
 import logo from './resources/logo.svg'
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
 						<Route path="/album/:id" component={Album} />
 						<Route path="/photo/:id" component={Photo} />
 						<Route path="/addimage/" component={AddImage} />
+						<Route path="/addalbum/" component={AddAlbum} />
 						{/* <Route path="/removeimage/" component={RemoveImage} /> */}
 					</div>
         		</Router>

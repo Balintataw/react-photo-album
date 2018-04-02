@@ -7,11 +7,8 @@ import './css/Album.css'
 
 export class Album extends Component {
     componentDidMount(props) {
-        console.log(this.props)
         const id = this.props.match.params.id
-
         getAlbumImagesById(id)
-
     }
     componentWillReceiveProps(newprops) {  
         const id = newprops.match.params.id

@@ -1,34 +1,28 @@
 {
   "albums": [
     {
-      "id": "1",
-      "albumName": "Japan",
-      "albumImage": "http://placehold.it/150/150"
+      "id": 1,
+      "albumName": "Japan"
     },
     {
-      "id": "2",
-      "albumName": "Germany",
-      "albumImage": "http://placehold.it/150/150"
+      "id": 2,
+      "albumName": "Germany"
     },
     {
-      "id": "3",
-      "albumName": "Philippines",
-      "albumImage": "http://placehold.it/150/150"
+      "id": 3,
+      "albumName": "Philippines"
     },
     {
-      "id": "4",
-      "albumName": "Norway",
-      "albumImage": "http://placehold.it/150/150"
+      "id": 4,
+      "albumName": "Norway"
     },
     {
-      "id": "5",
-      "albumName": "Russia",
-      "albumImage": "http://placehold.it/150/150"
+      "id": 5,
+      "albumName": "Russia"
     },
     {
-      "id": "6",
-      "albumName": "Kazakhstan",
-      "albumImage": "http://placehold.it/150/150"
+      "id": 6,
+      "albumName": "Kazakhstan"
     }
   ],
   "images": [

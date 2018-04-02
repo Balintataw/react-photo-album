@@ -23,6 +23,9 @@ export class Sidebar extends Component {
                             
                         })}
                     </div>
+                    <div className="add-button-container">
+                        <Link to={"/addalbum"} className="add-album">Add Album</Link>
+                    </div>
                 </div>
             </div>
         )
