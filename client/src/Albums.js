@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import {getAlbumsAndImages} from './photoAction'
 import {connect} from 'react-redux'
+import './css/Albums.css'
 
 
 export class Albums extends Component {
@@ -12,7 +13,7 @@ export class Albums extends Component {
     render() {
         return (
             <div className="albums-container">
-                <div className="header">
+                <div className="albums-header">
                     <h1>My Photo Albums</h1>
                 </div>
                 <div className="albums">

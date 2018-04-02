@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {getImageById} from './photoAction'
 import {connect} from 'react-redux'
 import axios from 'axios'
+import './css/Photo.css'
 
 export class Photo extends Component {
   
@@ -30,7 +31,7 @@ export class Photo extends Component {
                 <div className="img-and-caption">
                     <img src={this.props.imageURL} value={this.props.imageId} id="single-foto-img" alt=""/>
                     <p id="image-caption">{this.props.imageName}</p>
-                    <button onClick={this.handleClick}>Delete image</button>
+                    <button onClick={this.handleClick} className="delete-image-button">Delete image</button>
                 </div>
             </div>
         )

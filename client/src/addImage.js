@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Sidebar from './Sidebar'
+import './css/AddImage.css'
 
 export class AddImage extends Component {
 	state = {
-		albumId: 0,
+		albumId: '',
 		imageName: '',
 		imageURL: ''
 	}
 	handleFormSubmit = (e) => {
 		e.preventDefault()
-	  axios.post('http://localhost:3001/images', this.state).then(resp => {
-		  this.props.history.push('/AddImage')
-	  }).catch(e => console.log(e)) 
+	  	axios.post('http://localhost:3001/images', this.state).then(resp => {
+			this.props.history.push('/AddImage')
+	  	}).catch(e => console.log(e)) 
 	}
 	handleChange = (e) => {
 		console.log(typeof e.target.value)
@@ -25,7 +26,7 @@ export class AddImage extends Component {
 		e.preventDefault();
 		this.props.history.goBack()
 	}
-	
+
     render() {
 		return (
 			<div className="addImage-container">
@@ -35,8 +36,8 @@ export class AddImage extends Component {
 						<input onChange={this.handleChange} type='text' value={this.state.albumId} name='albumId' placeholder='Album Id' />
 						<input onChange={this.handleChange} type='text' value={this.state.imageName} name='imageName' placeholder='Image Name' />
 						<input onChange={this.handleChange} type='text' value={this.state.imageURL} name='imageURL' placeholder='Image Path' />
-						<button tytpe='submit'>Save</button>
-						<button onClick={this.handleClick} type="button">Go Back</button>  
+						<button tytpe='submit' className="save">Save</button>
+						<button onClick={this.handleClick} type="button"className="back">Go Back</button>  
 					</form>
 				</div>
 			</div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 import Sidebar from './Sidebar'
 import { getAlbumImagesById } from './photoAction'
+import './css/Album.css'
 
 export class Album extends Component {
     componentDidMount(props) {

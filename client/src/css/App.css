@@ -1,0 +1,30 @@
+#root {
+  /* width: 100%; */
+}
+
+.App {
+  /* height: 100%; */
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 115;
+  background-color: rgb(232, 232, 232);
+  margin: 0;
+  width: 100%;
+  height: 4rem;
+  padding-left: 1.5rem;
+  border-bottom: 1.5px solid black;
+}
+
+#logo {
+  width: 3rem;
+}
+
+.app-title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding-left: 1.5rem;
+  letter-spacing: 0.2em;
+}

@@ -1,0 +1,67 @@
+.sidebar-container {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  margin-top: 4rem;
+  background-color: rgb(165, 165, 165);
+  border-right: 1px solid black;
+  
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* margin-top: 4rem; */
+}
+
+  .pbuttons-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid orange;
+  }
+
+  .pbuttons-wrapper .permanent-buttons {
+    background-color: rgb(112, 141, 238);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 3.5rem;
+    height: 3.5rem;
+    width: 8rem;
+    margin: 10px 0;
+    color: white;
+    border-radius: 50% 20%;
+    border-bottom: px solid orange;
+    box-shadow: 2px 2px white;
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* height: 100%; */
+    /* margin-top: 4rem; */
+    /* align-items: center; */
+    justify-content: space-evenly;
+  }
+  
+  .buttons-wrapper a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 3.5rem;
+    background-color: rgb(53, 75, 145);
+    height: 3.5rem;
+    width: 8rem;
+    margin: 10px 0;
+    color: white;
+    border-radius: 50% 20%;
+    border-bottom: 1px solid orange;
+    box-shadow: 2px 2px white;
+  }
+
+  .sidebar a:active, .sidebar .permanent-buttons:active {
+    box-shadow: inset 2px 2px 2px rgb(36, 31, 31);
+    line-height: 3.7rem;
+  }
