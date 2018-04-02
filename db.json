@@ -1,27 +1,27 @@
 {
   "albums": [
     {
-      "id": 1,
+      "id": "1",
       "albumName": "Japan"
     },
     {
-      "id": 2,
+      "id": "2",
       "albumName": "Germany"
     },
     {
-      "id": 3,
+      "id": "3",
       "albumName": "Philippines"
     },
     {
-      "id": 4,
+      "id": "4",
       "albumName": "Norway"
     },
     {
-      "id": 5,
+      "id": "5",
       "albumName": "Russia"
     },
     {
-      "id": 6,
+      "id": "6",
       "albumName": "Kazakhstan"
     }
   ],

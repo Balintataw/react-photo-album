@@ -17,6 +17,7 @@ export class Albums extends Component {
                     <h1>My Photo Albums</h1>
                 </div>
                 <div className="albums">
+                {/* {console.log(this.props)} */}
                     {this.props.albumsData.map((album, i) => {
                         return  <Link to={"/album/" + album.id} key={"A" + i}>
                                 <div className="album">
@@ -32,10 +33,9 @@ export class Albums extends Component {
 };
 
 function mapStateToProps(state) {
+    console.log(state)
     return {
-        albumsData: state.albumsAndImages,
-        albumId: state.albumId,   //I think this is not connected in reducer
-        images: state.images
+        albumsData: state.albumsAndImages
     }
 }
 
