@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import {getAlbums} from './photoAction'
 import {connect} from 'react-redux'
@@ -7,6 +7,7 @@ export class Sidebar extends Component {
     componentDidMount() {
         getAlbums()
     } 
+
     render() {
         return (
             <div>

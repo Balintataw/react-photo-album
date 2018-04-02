@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react'
 import axios from 'axios'
 import Sidebar from './Sidebar'
 
@@ -11,7 +10,6 @@ export class AddImage extends Component {
 	}
 	handleFormSubmit = (e) => {
 		e.preventDefault()
-	  console.log(this.state)
 	  axios.post('http://localhost:3001/images', this.state).then(resp => {
 		  this.props.history.push('/AddImage')
 	  }).catch(e => console.log(e)) 
@@ -23,11 +21,14 @@ export class AddImage extends Component {
 			[e.target.name]: e.target.value
 		})
 	}
+	handleClick = (e) => {
+		e.preventDefault();
+		this.props.history.goBack()
+	}
+	
     render() {
 		return (
 			<div className="addImage-container">
-						{console.log(this)}
-			
      		    <Sidebar />
 				<div className="addImage-container-right">
 					<form onSubmit={this.handleFormSubmit} id="form-container">
@@ -35,7 +36,7 @@ export class AddImage extends Component {
 						<input onChange={this.handleChange} type='text' value={this.state.imageName} name='imageName' placeholder='Image Name' />
 						<input onChange={this.handleChange} type='text' value={this.state.imageURL} name='imageURL' placeholder='Image Path' />
 						<button tytpe='submit'>Save</button>
-						<Link to={this.props.location.pathname}>Go Back</Link>
+						<button onClick={this.handleClick} type="button">Go Back</button>  
 					</form>
 				</div>
 			</div>

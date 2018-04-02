@@ -1,46 +1,36 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import {getImageById, getAlbumImagesById, getImages} from './photoAction'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import {getImageById} from './photoAction'
 import {connect} from 'react-redux'
+import axios from 'axios'
 
 export class Photo extends Component {
   
     componentDidMount(props) {
-        // console.log(this.props)
         const id = this.props.match.params.id
-        // const album_Id = this.props.albumId
         getImageById(id)
-        // getImages()
-        // getAlbumImagesById(album_Id)
     }
-
-    // next = () => {
-    //     getImageById(this.props.imageId + 1)
-    // }
-    // previous = () => {
-    //     getImageById(this.props.imageId - 1)
-    // }
-    // componentWillReceiveProps(nextProps) {
-    //     console.log(this.props.albumId)
-    //     console.log(nextProps.albumId)
-    //     if(nextProps.albumId !== this.props.albumId) {
-    //         console.log('good')
-    //     }
-    // }
+    handleClick = (e) => {
+        const id = this.props.imageId
+        axios.delete('http://localhost:3001/images/' + id).then(resp => {
+            // render deleted message instead of alert
+        })
+        alert('Deleted');
+        this.props.history.goBack()
+    }
 
     render() {
         return (
             <div className="foto-container">
                 <div className="photo-nav-bar">
-                {/* {console.log(this.props)} */}
                     <Link onClick={this.previous} to={'/photo/' + this.props.imageId}>Previous</Link> 
                     <Link to={'/album/' + this.props.albumId}>Go back</Link> 
                     <Link onClick={this.next} to={'/photo/' + this.props.imageId}>Next</Link> 
                 </div>
-                {/* {console.log(this.props)} */}
                 <div className="img-and-caption">
-                    <img src={this.props.imageURL} id="single-foto-img" alt=""/>
+                    <img src={this.props.imageURL} value={this.props.imageId} id="single-foto-img" alt=""/>
                     <p id="image-caption">{this.props.imageName}</p>
+                    <button onClick={this.handleClick}>Delete image</button>
                 </div>
             </div>
         )

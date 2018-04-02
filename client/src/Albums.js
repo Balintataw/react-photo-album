@@ -1,19 +1,12 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-import {getAlbumsAndImages} from './photoAction';
-// import store from './store';
+import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
+import {getAlbumsAndImages} from './photoAction'
 import {connect} from 'react-redux'
 
 
 export class Albums extends Component {
-    // state = {
-    //     albumsData: [],
-    //     albumId: '',
-    //     images: []
-    // }
     componentDidMount() {
         getAlbumsAndImages()
-
     }
 
     render() {

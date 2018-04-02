@@ -1,16 +1,10 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import {connect} from 'react-redux';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import {connect} from 'react-redux'
 import Sidebar from './Sidebar'
-import { getAlbumImagesById } from './photoAction';
+import { getAlbumImagesById } from './photoAction'
 
 export class Album extends Component {
-    // state = {
-    //     images: [],
-    //     albumName: ''
-    // }
-
-    
     componentDidMount(props) {
         console.log(this.props)
         const id = this.props.match.params.id
@@ -35,8 +29,8 @@ export class Album extends Component {
                     </header>
                     <div className="album-images">
                         {this.props.images.map((image, i) => {
-                            return  <Link to={"/photo/" + image.id} key={"image" + i}><div className="images-container">
-                            {/* {console.log(image)} */}
+                            return  <Link to={"/photo/" + image.id} key={"image" + i}>
+                                    <div className="images-container">
                                         <img src={image.imageURL}  alt=""/>
                                         <h3 className="image-name">{image.imageName}</h3>
                                     </div></Link>
@@ -49,7 +43,6 @@ export class Album extends Component {
 };
 
 function mapStateToProps(state) {
-    console.log(state)
     return {
         images: state.imagesByAlbumId.images,
         albumName: state.imagesByAlbumId.albumName
