@@ -77,23 +77,58 @@ export function getImageById(id) {
     // }
 }
 
+// export function getAdjacent(id) {
+//     let p = Number(id)-2
+//     const n = Number(id)+1
+//     // if (p < 0) {return p = p+2}
+//         axios.get(`http://localhost:3001/images/?_start=${p}&_end=${n}`).then(resp => {
+//             console.log(resp.data)
+
+//             store.dispatch({
+//                 type: 'GET_ADJACENT',
+//                 // payload: resp.data
+//                 payload: {
+//                     prev: resp.data[0],
+//                     curr: resp.data[1],
+//                     next: resp.data[2]
+//                 }
+//             })
+//             // console.log(resp.data)
+//         })
+    
+// }
+
 export function getAdjacent(id) {
-    let p = Number(id)-2
-    const n = Number(id)+1
-    // if (p < 0) {return p = p+2}
-        axios.get(`http://localhost:3001/images/?_start=${p}&_end=${n}`).then(resp => {
+    axios.get(`http://localhost:3001/images/${id}?_expand=album`).then(resp => {
+        const image = resp.data
+
+        axios.get(`http://localhost:3001/albums/${image.albumId}?_embed=images`).then(resp2 => {
+            const images = resp2.data.images
+
+            const rep = {
+                prev: images.find((im, i, arr) => {
+                    if(arr[i + 1] && arr[i + 1].id === image.id) {
+                        return true
+                    } else {
+                        return false
+                    }
+                }) || null,
+                curr: image,
+                next: images.find((im, i, arr) => {
+                    if (arr[i - 1] && arr[i - 1].id === image.id){
+                        return true
+                    } else {
+                        return false
+                    }
+                }) || null
+            }
+
             store.dispatch({
                 type: 'GET_ADJACENT',
-                // payload: resp.data
-                payload: {
-                    prev: resp.data[0],
-                    curr: resp.data[1],
-                    next: resp.data[2]
-                }
+                payload: rep
             })
-            // console.log(resp.data)
         })
-    
+    })
 }
 
 export function getImages() {

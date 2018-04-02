@@ -14,11 +14,9 @@ const initialState = {
         images:[]
     },
     adjacent: {
-        prev:{},
-        next:{},
-        curr:{
-            
-        }
+        prev:null,
+        next:null,
+        curr:{}
     }
 }
 
