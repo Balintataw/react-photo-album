@@ -6,12 +6,20 @@ import './css/Albums.css'
 
 
 export class Albums extends Component {
+    state = {
+        isSorted: false
+    }
     static defaultProps = {
         albumsData: [],
-        sortedAlbumsData: []
+        sortedAlbumsData: [],
     }
     componentDidMount() {
-        getAlbumsAndImages()
+        console.log(this.state)
+        if(this.state.isSorted === true) {
+            sortAlbums()
+        } else {
+            getAlbumsAndImages()
+        }
         
     }
     componentWillReceiveProps = (newprops) => {
@@ -19,8 +27,14 @@ export class Albums extends Component {
         // console.log(newprops)
             // sortAlbums()
     }
-    handleClick = () => {
+    handleClick = (e) => {
+        // e.preventDefault()
         console.log('clicked')
+        this.setState({
+            isSorted: !this.state.isSorted
+        })
+        console.log(this.state)
+        // window.location.reload()
         sortAlbums()
     }
     render() {
