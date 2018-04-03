@@ -15,7 +15,7 @@ export class Sidebar extends Component {
                 <div className="sidebar">
                     <div className="pbuttons-wrapper">
                         <Link to={"/"} className="permanent-buttons">Home</Link>
-                        <Link to={"/addimage"} className="permanent-buttons">Add an Image</Link>
+                        <Link to={"/addimage/" + this.props.albumId} className="permanent-buttons">Add an Image</Link>
                     </div>
                     <div className="buttons-wrapper">
                         {this.props.albums.map((album, i) => {
@@ -35,7 +35,8 @@ export class Sidebar extends Component {
 function mapStateToProps(state) {
     // console.log(state)
     return {
-        albums: state.albums
+        albums: state.albums,
+        albumId: state.imagesByAlbumId.id
     }
 }
 

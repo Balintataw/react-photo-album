@@ -28,7 +28,7 @@ class App extends Component {
 						<Route path="/" exact component={Albums} />
 						<Route path="/album/:id" component={Album} />
 						<Route path="/photo/:id" component={Photo} />
-						<Route path="/addimage/" component={AddImage} />
+						<Route path="/addimage/:albumid" component={AddImage} />
 						<Route path="/addalbum/" component={AddAlbum} />
 						{/* <Route path="/removeimage/" component={RemoveImage} /> */}
 					</div>

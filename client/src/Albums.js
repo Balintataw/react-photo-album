@@ -17,7 +17,6 @@ export class Albums extends Component {
                     <h1>My Photo Albums</h1>
                 </div>
                 <div className="albums">
-                {/* {console.log(this.props)} */}
                     {this.props.albumsData.map((album, i) => {
                         return  <Link to={"/album/" + album.id} key={"A" + i}>
                                 <div className="album">
