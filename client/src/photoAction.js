@@ -84,7 +84,7 @@ export function getAdjacent(id) {
                     } else {
                         return false
                     }
-                }) || null,
+                }) || images[images.length - 1],
                 curr: image,
                 next: images.find((im, i, arr) => {
                     if (arr[i - 1] && arr[i - 1].id === image.id){
@@ -92,7 +92,7 @@ export function getAdjacent(id) {
                     } else {
                         return false
                     }
-                }) || null
+                }) || images[0]
             }
 
             store.dispatch({
