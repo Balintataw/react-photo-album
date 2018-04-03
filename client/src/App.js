@@ -30,7 +30,6 @@ class App extends Component {
 						<Route path="/photo/:id" component={Photo} />
 						<Route path="/addimage/:albumid" component={AddImage} />
 						<Route path="/addalbum/" component={AddAlbum} />
-						{/* <Route path="/removeimage/" component={RemoveImage} /> */}
 					</div>
         		</Router>
       		</div>

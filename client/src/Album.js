@@ -27,7 +27,6 @@ export class Album extends Component {
                     </header>
                     <div className="album-images">
                         {this.props.images.map((image, i) => {
-                            // console.log(image)
                             return  <Link to={"/photo/" + image.id} key={"image" + i}>
                                     <div className="images-container">
                                         <img src={image.imageURL}  alt=""/>
@@ -42,7 +41,6 @@ export class Album extends Component {
 };
 
 function mapStateToProps(state) {
-    console.log(state)
     return {
         images: state.imagesByAlbumId.images,
         albumName: state.imagesByAlbumId.albumName,

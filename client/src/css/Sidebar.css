@@ -5,18 +5,17 @@
   margin-top: 4rem;
   background-color: rgb(165, 165, 165);
   border-right: 1px solid black;
-  
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* margin-top: 4rem; */
 }
 
   .pbuttons-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     border-bottom: 1px solid orange;
   }
@@ -26,23 +25,24 @@
     text-decoration: none;
     text-align: center;
     font-size: 1rem;
-    line-height: 3.5rem;
-    height: 3.5rem;
+    line-height: 2.5rem;
+    height: 2.5rem;
     width: 8rem;
     margin: 10px 0;
     color: white;
-    border-radius: 50% 20%;
+    border-radius: 20px;
     border-bottom: px solid orange;
     box-shadow: 2px 2px white;
   }
 
+  .pbuttons-wrapper .home {
+    display: block;
+    width: 90%;
+  }
+
   .buttons-wrapper {
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
-    /* height: 100%; */
-    /* margin-top: 4rem; */
-    /* align-items: center; */
     justify-content: space-evenly;
   }
   
@@ -50,37 +50,24 @@
     text-decoration: none;
     text-align: center;
     font-size: 1rem;
-    line-height: 3.5rem;
+    line-height: 2.5rem;
     background-color: rgb(53, 75, 145);
-    height: 3.5rem;
+    height: 2.5rem;
     width: 8rem;
     margin: 10px 0;
     color: white;
-    border-radius: 50% 20%;
+    border-radius: 20px;
     border-bottom: 1px solid orange;
     box-shadow: 2px 2px white;
   }
 
   .sidebar a:active, .sidebar .permanent-buttons:active {
     box-shadow: inset 2px 2px 2px rgb(36, 31, 31);
-    line-height: 3.7rem;
+    line-height: 2.7rem;
   }
 
   .add-button-container {
     display: flex;
     margin-left: 12px;
     margin-top: 10px;
-  }
-  .add-button-container .add-album {
-    text-decoration: none;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 3.5rem;
-    background-color: rgb(53, 75, 145);
-    height: 3.5rem;
-    width: 8rem;
-    color: white;
-    border-radius: 50% 20%;
-    border-bottom: 1px solid orange;
-    box-shadow: 2px 2px white;
   }

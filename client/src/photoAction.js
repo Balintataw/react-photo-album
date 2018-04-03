@@ -1,23 +1,19 @@
 import store from './store'
 import axios from 'axios'
 
-// export function addAlbum() {
-//     axios.post('http://localhost:3001/albums', objgoeshere).then(resp => {
-//     // axios.get('http://localhost:3001/albums?_embed=images').then(resp => {
-//         console.log(resp.data)
-//         this.setState({
-//             albumsData: resp.data
-//         })
-//         store.dispatch({
-//             type: 'ADD_ALBUM',
-//             payload: objgoeshere
-//         })
-//     })
-// }                      
 export function getAlbumsAndImages() {
     axios.get('http://localhost:3001/albums?_embed=images').then(resp => {
         store.dispatch({
             type: 'GET_ALBUMS_IMAGES',
+            payload: resp.data
+        })
+    })
+}
+
+export function sortAlbums() {
+    axios.get('http://localhost:3001/albums?_embed=images&_sort=albumName').then(resp => {
+        store.dispatch({
+            type: 'SORT_ALBUMS',
             payload: resp.data
         })
     })
@@ -45,36 +41,12 @@ export function getAlbumImagesById(id) {
 }
 
 export function getImageById(id) {
-    // if(id) {
     axios.get(`http://localhost:3001/images/${id}?_expand=album`).then(resp => {
-        // const image = resp.data
-        // axios.get(`http://localhost:3001/albums/${id}?embed=images`).then(resp2 => {
-        //     const images = resp2.data.images
-        //     const rep = {
-        //         prev: images.find((im, i) => {
-        //             if(images[i + 1] === image.id) {
-        //                 return true
-        //             } else {
-        //                 return false
-        //             }
-        //         }),
-        //         curr: image,
-        //         next: images.find((im, i) => {
-        //             if(images[i-1] === image.id) {
-        //                 return true
-        //             } else {
-        //                 return false
-        //             }
-        //         })
-        //     }
-        //     console.log(rep)
-        // })
         store.dispatch({
             type: 'GET_IMAGE_BY_ID',
             payload: resp.data
         })
     })
-    // }
 }
 
 // export function getAdjacent(id) {

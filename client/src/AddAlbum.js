@@ -12,7 +12,7 @@ export class AddAlbum extends Component {
         axios.post('http://localhost:3001/albums', this.state).then(resp => {
             this.props.history.push('/AddAlbum')
         }).catch(e => console.log(e))
-        this.props.history.goBack()
+        this.props.history.goBack()     
     }
     handleChange = (e) => {
         this.setState({
@@ -28,8 +28,8 @@ export class AddAlbum extends Component {
             <Sidebar />
                 <div className="add-album-container-right">
                     <form onSubmit={this.handleFormSubmit} id="form-container">
-                    <label>Add a new album</label>
-                        <input onChange={this.handleChange} type='text' value={this.state.albumName} name='albumName' placeholder='Album Id' />
+                    <label>Add a new album</label>        {/* make proper labels */}
+                        <input onChange={this.handleChange} type='text' value={this.state.albumName} name='albumName' placeholder='Album name' />
                         <button tytpe='submit' className="save">Save</button>
 						<button onClick={this.handleClick} type="button"className="back">Go Back</button>  
                     </form>

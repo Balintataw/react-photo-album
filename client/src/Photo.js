@@ -19,7 +19,7 @@ export class Photo extends Component {
         }
     }
     handleClick = (e) => {
-        const id = this.props.imageId
+        const id = this.props.curr.id
         axios.delete('http://localhost:3001/images/' + id).then(resp => {
             // render deleted message instead of alert
         })

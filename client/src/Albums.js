@@ -1,21 +1,35 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import {getAlbumsAndImages} from './photoAction'
+import {getAlbumsAndImages, sortAlbums} from './photoAction'
 import {connect} from 'react-redux'
 import './css/Albums.css'
 
 
 export class Albums extends Component {
+    static defaultProps = {
+        albumsData: [],
+        sortedAlbumsData: []
+    }
     componentDidMount() {
         getAlbumsAndImages()
+        
     }
-
+    componentWillReceiveProps = (newprops) => {
+        // console.log(this.props)
+        // console.log(newprops)
+            // sortAlbums()
+    }
+    handleClick = () => {
+        console.log('clicked')
+        sortAlbums()
+    }
     render() {
         return (
             <div className="albums-container">
                 <div className="albums-header">
                     <h1>My Photo Albums</h1>
                 </div>
+                <Link to={"/"} onClick={this.handleClick}>Sort</Link>
                 <div className="albums">
                     {this.props.albumsData.map((album, i) => {
                         return  <Link to={"/album/" + album.id} key={"A" + i}>
@@ -32,8 +46,9 @@ export class Albums extends Component {
 };
 
 function mapStateToProps(state) {
-    console.log(state)
+    // console.log(state)
     return {
+        sortedAlbumsData: state.sortedAlbums,
         albumsData: state.albumsAndImages
     }
 }

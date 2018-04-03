@@ -1,5 +1,6 @@
 const initialState = {
     albums: [],
+    sortedAlbums: [],
     images: [],
     currentImage: {
         image: '',
@@ -24,6 +25,8 @@ export default function(state = initialState, action) {
     switch (action.type) {
         case 'GET_ALBUMS':
             return {...state, albums: action.payload}
+        case 'SORT_ALBUMS':
+            return {...state, sortedAlbums: action.payload}
         case 'GET_IMAGES':
             return {...state, images: action.payload}
         case 'GET_ALBUMS_IMAGES':

@@ -14,8 +14,9 @@ export class Sidebar extends Component {
             <div className="sidebar-container">
                 <div className="sidebar">
                     <div className="pbuttons-wrapper">
-                        <Link to={"/"} className="permanent-buttons">Home</Link>
+                        <Link to={"/"} className="permanent-buttons home">Home</Link>
                         <Link to={"/addimage/" + this.props.albumId} className="permanent-buttons">Add an Image</Link>
+                        <Link to={"/addalbum"} className="permanent-buttons">Add Album</Link>
                     </div>
                     <div className="buttons-wrapper">
                         {this.props.albums.map((album, i) => {
@@ -24,7 +25,6 @@ export class Sidebar extends Component {
                         })}
                     </div>
                     <div className="add-button-container">
-                        <Link to={"/addalbum"} className="add-album">Add Album</Link>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,6 @@ export class Sidebar extends Component {
 };
 
 function mapStateToProps(state) {
-    // console.log(state)
     return {
         albums: state.albums,
         albumId: state.imagesByAlbumId.id
