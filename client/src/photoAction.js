@@ -7,6 +7,8 @@ export function getAlbumsAndImages() {
             type: 'GET_ALBUMS_IMAGES',
             payload: resp.data
         })
+    }).catch(e => {
+        console.log('Error', e)
     })
 }
 
